@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Bank.calculateDeposit(1);
+        Bank.calculateDeposit(5);
+        Bank.calculateDeposit(10);
     }
 }
