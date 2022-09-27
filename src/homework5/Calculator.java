@@ -7,10 +7,10 @@ public class Calculator {
 
     public static void main(String[] args) {
         readCommand();
-        int num1 = getInt();
-        int num2 = getInt();
+        int firstOperand = getInt();
+        int secondOperand = getInt();
         char operation = getOperation();
-        int result = calc(num1,num2,operation);
+        int result = calc(firstOperand,secondOperand,operation);
         System.out.println("Результат операции: " + result);
     }
 
@@ -48,24 +48,24 @@ public class Calculator {
         return operation;
     }
 
-    public static int calc(int num1, int num2, char operation){
+    public static int calc(int firstOperand, int secondOperand, char operation){
         int result;
         switch (operation){
             case '+':
-                result = num1 + num2;
+                result = firstOperand + secondOperand;
                 break;
             case '-':
-                result = num1 - num2;
+                result = firstOperand - secondOperand;
                 break;
             case '*':
-                result = num1 * num2;
+                result = firstOperand * secondOperand;
                 break;
             case '/':
-                result = num1 / num2;
+                result = firstOperand / secondOperand;
                 break;
             default:
                 System.out.println("Операция не распознана. Повторите ввод.");
-                result = calc(num1, num2, getOperation());
+                result = calc(firstOperand, secondOperand, getOperation());
         }
         return result;
     }
