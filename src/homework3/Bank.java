@@ -1,3 +1,5 @@
+package homework3;
+
 import java.util.Scanner;
 
 public class Bank {
